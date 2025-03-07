@@ -1,0 +1,123 @@
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menü Stili */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Menüyü sola, logoyu ortaya yerleştirir */
+    align-items: center;
+    padding: 10px 20px; /* İç boşluğu azaltarak minimalist görünüm için */
+    position: sticky; /* Yapışkan menü */
+    top: 0; /* Sayfanın üst kısmına yapıştır */
+    z-index: 1000; /* Diğer öğelerin üstünde görünmesi için */
+}
+
+.logo img {
+    max-width: 50px; /* Logonun maksimum genişliğini ayarladık */
+    height: auto; /* Yüksekliği otomatik ayarladık */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em; /* Font boyutunu biraz küçülttük */
+}
+
+/* Logo */
+.logo {
+    margin: 0 auto; /* Ortaya yerleştirmek için auto margin kullanıldı */
+    font-size: 1.2em; /* Font boyutunu küçülttük */
+    position: relative; /* Mutlak konum yerine göreceli konum kullanıyoruz */
+    max-width: 150px; /* Logonun maksimum genişliğini ayarladık */
+    height: auto; /* Yüksekliği otomatik ayarladık */
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 500px; /* Yüksekliği artırdık */
+    position: relative;
+}
+
+.slider-inner {
+    display: flex;
+    transition: transform 0.5s ease; /* Kaydırma geçiş animasyonu */
+}
+
+.slider img {
+    width: 100vw; /* Her görsel tam genişlikte olacak şekilde ayarlandı */
+    height: 100%; /* Yüksekliği tam olacak şekilde ayarlandı */
+    object-fit: cover; /* Görsellerin orantılı görünmesi için */
+}
+
+/* Ok İkon Stilleri */
+.arrow {
+    position: absolute;
+    top: 50%; /* Dikey ortalama */
+    transform: translateY(-50%);
+    font-size: 30px; /* Ok işareti boyutu */
+    color: white; /* Ok rengi */
+    background-color: rgba(0, 0, 0, 0.5); /* Yarı saydam arka plan */
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer; /* Tıklanabilir göster */
+    z-index: 10; /* Ok işaretlerinin görünürlüğü için */
+}
+
+.left-arrow {
+    left: 10px; /* Sol okun konumu */
+}
+
+.right-arrow {
+    right: 10px; /* Sağ okun konumu */
+}
+
+/* Samsun Hakkında Bölümü */
+.about-samsun {
+    text-align: center;
+    padding: 2rem;
+    background-color: #b4ced2;
+}
+
+/* Gezilecek Yerler Galerisi */
+.gallery {
+    text-align: center;
+    padding: 2rem;
+}
+
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 500x;  /* Mevcut boyutun 2 katı olacak şekilde ayarlayın */
+    height: 300px; /* Mevcut boyutun 2 katı olacak şekilde ayarlayın */
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+ 
